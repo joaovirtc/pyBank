@@ -1,0 +1,8 @@
+p.validar {
+    color: red;
+    font-size: 15px;
+    display: none;
+}
+p.validar.active{
+    display: block;
+}
