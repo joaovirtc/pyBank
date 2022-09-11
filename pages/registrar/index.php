@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+            
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,6 +23,12 @@
 
         <label for="email"> digite o email</label>
         <input type="email" name="email">
+        <?php 
+            if(isset($_SESSION['err_email'])){
+                echo ("<p class=\"validar active\">{$_SESSION['err_email']}</p>");
+            };
+
+        ?>
 
         <label for="senha"> digite a senha</label>
         <input type="text" name="senha" onchange="validarPassword()" id="password">
@@ -26,7 +36,7 @@
         <label for="confirmar"> confirme a senha</label>
         <input type="text" name="confirmar" onchange="validarPassword()" id="confirm_password">
         <p class="validar " id="validacao">Senhas diferentes</p>
-        <input type="submit" value="registrar-se" >
+        <input type="submit" value="registrar-se" name="submit">
      </form>
 
 
