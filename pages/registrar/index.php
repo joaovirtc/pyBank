@@ -1,6 +1,6 @@
 <?php 
     session_start();
-            
+    require_once("../../assets/conexao.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -25,7 +25,7 @@
 
 
             <!-- abrindo o formulario de criaçao de conta -->
-            <form action="validar.php" method="POST">
+            <form action="#" method="POST">
                 <h2>CRIE SUA CONTA!</h2>
 
                 <!-- INPUT NOME -->
@@ -69,7 +69,7 @@
 
                 <!-- INPUT SENHA -->
                 <div class="single-input">
-                    <input type="password" name="senha" class="input" required>
+                    <input type="password" name="senha" class="input validar" onchange="validarPassword()" id="password" required>
                     <label for="nome">Senha</label>
                 </div>
                 <!-- <label for="senha">Senha</label>
@@ -79,7 +79,7 @@
 
                 <!-- INPUT COMFIRMAR SENHA -->
                 <div class="single-input">
-                    <input type="password" name="confirmar" class="input" required>
+                    <input type="password" name="confirmar" class="input validar" onchange="validarPassword()" id="confirm_password" required>
                     <label for="nome">Confirme sua senha</label>
                 </div>
                 <!-- <label for="confirmar"> Confirme sua senha</label>
@@ -108,3 +108,30 @@
 </body>
 
 </html>
+
+
+<?php
+    
+    if(isset($_POST['submit']) ){
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+
+
+        $validar = $conexao->query("SELECT * FROM user WHERE email = '$email'");
+        
+        if(mysqli_num_rows($validar) > 0 ){
+            session_start();
+            $_SESSION['err_email'] = "Ooops este email já esta em uso!";
+            header('location: ./index.php');
+        }
+        else{
+            //enviando o usuario para verificar o email
+            $nome = base64_encode($nome);
+            $email = base64_encode($email);
+            $senha = base64_encode($senha);
+            header("location: ./validar.php?nome={$nome}&senha={$senha}");
+            
+        };
+    }
+?>
