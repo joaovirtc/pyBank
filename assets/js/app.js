@@ -22,3 +22,14 @@ const linkAction = () => {
 };
 
 navLink.forEach(n => n.addEventListener("click", linkAction));
+
+// const sr = ScrollReveal({
+//   origin: "bottom",
+//   distance: "60px",
+//   duration: "2500",
+// });
+
+// sr.reveal(`.home__images`, { distance: "120px", delay: 400 });
+// sr.reveal(`.home__title`, { delay: 1000 });
+// sr.reveal(`.home__description`, { delay: 1200 });
+// sr.reveal(`.home__button`, { delay: 1400 });
