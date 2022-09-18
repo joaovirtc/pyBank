@@ -90,7 +90,7 @@
 
                 <!-- INPUT SUBMIT -->
                 <div class="div__submit">
-                    <p class="validar " id="validacao">Senhas diferentes</p>
+                    <p class="validar" id="validacao">Senhas diferentes</p>
                     <input type="submit" value="CRIAR CONTA" name="submit" class="submit">
                 </div>
 
