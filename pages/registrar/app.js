@@ -3,6 +3,10 @@ let password = document.getElementById("password");
 let confirm_password = document.getElementById("confirm_password");
 let mensagem_validacao = document.getElementById("validacao");
 
+
+
+
+
 // funcao que valida os campos de senha ( input senha e confirmar senha)
 function validarPassword() {
   if (password.value != confirm_password.value) {

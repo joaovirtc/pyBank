@@ -1,6 +1,8 @@
 <?php 
     session_start();
-    require_once("../../assets/conexao.php");
+    unset($_SESSION['nome']);
+    unset($_SESSION['email']);
+    unset($_SESSION['senha']);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -25,7 +27,7 @@
 
 
             <!-- abrindo o formulario de criaçao de conta -->
-            <form action="#" method="POST">
+            <form action="validar.php" method="POST" >
                 <h2>CRIE SUA CONTA!</h2>
 
                 <!-- INPUT NOME -->
@@ -59,12 +61,7 @@
                 <input type="email" name="email" class="text-input"> -->
 
 
-                <!-- <?php 
-            if(isset($_SESSION['err_email'])){
-                echo ("<p class=\"validar active\">{$_SESSION['err_email']}</p>");
-            };
 
-        ?>   -->
 
 
                 <!-- INPUT SENHA -->
@@ -81,6 +78,7 @@
                 <div class="single-input">
                     <input type="password" name="confirmar" class="input validar" onchange="validarPassword()" id="confirm_password" required>
                     <label for="nome">Confirme sua senha</label>
+                    <p class="validar" id="validacao">Senhas diferentes</p>
                 </div>
                 <!-- <label for="confirmar"> Confirme sua senha</label>
                 <input type="text" name="confirmar" onchange="validarPassword()" id="confirm_password"
@@ -90,8 +88,15 @@
 
                 <!-- INPUT SUBMIT -->
                 <div class="div__submit">
-                    <p class="validar" id="validacao">Senhas diferentes</p>
-                    <input type="submit" value="CRIAR CONTA" name="submit" class="submit">
+                    <?php 
+                    // aparecer mensagem de erro caso tenha
+                        if(isset($_SESSION['err_email'])){
+                            echo ("<p class=\"validar active\">{$_SESSION['err_email']}</p>");
+                        };
+                        // limpando a session de erro
+                        unset($_SESSION['err_email']);
+                    ?>
+                    <input type="submit" value="CRIAR CONTA" name="env" class="submit">
                 </div>
 
 
@@ -110,28 +115,3 @@
 </html>
 
 
-<?php
-    
-    if(isset($_POST['submit']) ){
-        $nome = $_POST['nome'];
-        $email = $_POST['email'];
-        $senha = $_POST['senha'];
-
-
-        $validar = $conexao->query("SELECT * FROM user WHERE email = '$email'");
-        
-        if(mysqli_num_rows($validar) > 0 ){
-            session_start();
-            $_SESSION['err_email'] = "Ooops este email já esta em uso!";
-            header('location: ./index.php');
-        }
-        else{
-            //enviando o usuario para verificar o email
-            $nome = base64_encode($nome);
-            $email = base64_encode($email);
-            $senha = base64_encode($senha);
-            header("location: ./validar.php?nome={$nome}&senha={$senha}");
-            
-        };
-    }
-?>
