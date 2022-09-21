@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    user-select: none;
+    list-style: none;
+    font-family: "DM Sans", sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.user-foto{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+main#blur.active{
+filter: blur(20px);
+}
+
+
+.container-1{
+    width: 30vw;
+    height: 84vh;
+    border-right: 1px solid rgba(0, 0, 0, 0.178);
+}
+.container-2{
+    width: 36vw;
+    height: 84vh;
+    border-right: 1px solid rgba(0, 0, 0, 0.171);
+    
+}
+.container-3{
+    width: 30vw;
+    height: 84vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* ==================== MEUS CARTÔES =================== */
+
+.title{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title strong{
+    font-size: 1.3rem;
+    padding-left: 2rem;
+}
+
+.div-meus-cartoes{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cartao{
+    width: 100%;
+    /* border: 1px solid #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartao img {
+    position: relative;
+}
+.cartao p {
+    position: absolute;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.gerenciar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.gerenciar button {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #0009;
+    transition: color .2s;
+
+}
+
+.gerenciar button:hover{
+    color: #000;
+}
+
+
+/* ============================= SERVIÇOS =================== */
+
+
+.div-serviços{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+}
+
+.box-serviços{
+    width: 90%;
+    height: 60%;
+    /* border: 1px solid #000; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.box {
+    width: 90px;
+    height: 90px;
+    background: #F5F6FA;
+    box-shadow: 14px 15px 8px rgba(0, 0, 0, 0.01), 8px 9px 7px rgba(0, 0, 0, 0.05), 4px 4px 5px rgba(0, 0, 0, 0.09), 1px 1px 3px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+      
+.box p {
+    text-align: end;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+      
+.box i {
+    font-size: 35px;
+    color: #B03545;
+}
+
+
+/* ======================== POPUP ====================== */
+
+
+#popup{
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    padding: 50px;
+    background-color: #fff;
+    border: 1px solid #000;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    
+}
+
+#popup.active{
+    visibility: visible;
+    opacity: 1;
+    left: 50%;
+    transition: .5s;
+}
+
+.button{
+    position: relative;
+    width: 70px;
+    height: 30px;
+    font-size: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: width .5s,
+    border-radius .5s;
+}
+
+.button *{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .5s;
+}
+
+.icon{
+    opacity: 0;
+}
+
+.button:focus{
+    width: 30px;
+    background-color: #44c08a;
+    border-radius: 50%;
+}
+
+
+.button:focus .text-button{
+    opacity: 0;
+}
+
+.button:focus .icon{
+    opacity: 1;
+    transition-delay:.5s ;
+}
+
+
+
+/* ========================= TRANSAÇÕES ================= */
+
+
+.div-transacoes{
+    width: 90%;
+    height: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.ver-tudo{
+    color: #0005;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80px;
+    cursor: pointer;
+
+}
+
+.transacao-1{
+    width: 90%;
+    border-bottom: 1px solid #0003;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.transacao-2{
+    width: 90%;
+    border-bottom: 1px solid #0003;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.transacao-3{
+    width: 90%;
+    border-bottom: 1px solid #0003;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.transacao-4{
+    width: 90%;
+    border-bottom: 1px solid #0003;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.gasto {
+    color: red;
+}
+.recebido {
+    color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================== RESPONSIVE ======================== */
+
+@media screen and (max-width:845px) {
+    
+    main{
+        flex-direction: column;
+    }
+
+    .container-1{
+        width: 95vw;
+   
+        border: none;
+    
+    }
+    .container-2{
+        width: 95vw;
+        border: none;
+    
+    }
+
+    .box-serviços{
+        width: 60%;
+        flex-wrap: wrap;
+        padding: 2rem 0 ;
+    }
+
+
+
+
+    .container-3{
+        width: 95vw;
+        border: none;
+    
+    }
+
+
+
+}
