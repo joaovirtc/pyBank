@@ -60,12 +60,12 @@ filter: blur(20px);
 .container-1{
     width: 30vw;
     height: 84vh;
-    border-right: 1px solid rgba(0, 0, 0, 0.178);
+    border-right: 1px solid rgba(204, 204, 204, 0.493);
 }
 .container-2{
     width: 36vw;
     height: 84vh;
-    border-right: 1px solid rgba(0, 0, 0, 0.171);
+    border-right: 1px solid rgba(204, 204, 204, 0.459);
     
 }
 .container-3{
@@ -204,11 +204,11 @@ filter: blur(20px);
     top: 50%;
     left: 40%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 300px;
     height: 400px;
     padding: 50px;
     background-color: #fff;
-    border: 1px solid #000;
+    border: 1px solid #ccc;
     visibility: hidden;
     opacity: 0;
     transition: .5s;
@@ -222,7 +222,111 @@ filter: blur(20px);
     transition: .5s;
 }
 
-.button{
+
+.container-popup{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icon-pix{
+    font-size: 4rem;
+    color: #B03545;
+}
+
+
+.form-pix{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.single-input{
+    position: relative;
+    margin: 24px 0;
+    width:90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.single-input label{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: #ccc;
+    cursor: text;
+    transition: 0.2s ease-in-out;
+    max-width: 200px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input{
+    width: 100%;
+    padding: 5px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    outline: 0;
+    font-size: 16px;
+    color: rgb(80,80,80);
+    transition: 0.5s transform;
+}
+
+.input:focus,
+.input:valid{
+    border-bottom: 1px solid #B03545;
+}
+.input:focus ~ label,
+.input:valid ~ label{
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: #B03545;
+}
+
+
+.btn-enviar{
+    width: 95%;
+    height: 14%;
+    cursor: pointer;
+    background-color: #B03545;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    transition: border-radius .5s,
+    background-color .5s;
+    font-weight: 500;
+}
+
+.btn-enviar:hover{
+    border-radius: 14px;
+}
+.btn-fechar{
+    width: 95%;
+    height: 11%;
+    cursor: pointer;    
+    background-color: transparent;
+    border: 1px solid #B03545;
+    color: #B03545;
+    font-size: 16px;
+    transition: border-radius .5s,
+    border .5s;
+    font-weight: 500;
+}
+
+.btn-fechar:hover{
+    border-radius: 14px;
+    border: 1px solid #D41F37;
+}
+
+/* .button{
     position: relative;
     width: 70px;
     height: 30px;
@@ -262,7 +366,7 @@ filter: blur(20px);
 .button:focus .icon{
     opacity: 1;
     transition-delay:.5s ;
-}
+} */
 
 
 

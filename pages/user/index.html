@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User accout</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a74e3185bb.js" crossorigin="anonymous"></script>
@@ -135,12 +135,38 @@
     </main>
 
     <div id="popup">
-        <button class="button">
+        <!-- <button class="button">
             <span class="text-button">ENVIAR</span>
             <i class="ri-check-line icon"></i>
-        </button>
-        <button onclick="toggle()">FECHAR</button>
+        </button> -->
+        <div class="container-popup">
+            <div><i class="fa-brands fa-pix icon-pix"></i></div>
+
+            <!-- =================== FOMULÁRIO ==================== -->
+
+            <form action="" class="form-pix">
+
+                <!-- ================= INPUT CHAVE DO PIX =============== -->
+
+                <div class="single-input">
+                    <input type="text" name="senha" class="input" required>
+                    <label for="nome">Chave</label>
+                </div>
+
+                <!-- ================= INPUT VALOR =============== -->
+
+                <div class="single-input">
+                    <input type="text" name="senha" class="input" required>
+                    <label for="nome">Valor</label>
+                </div>
+                <input type="submit" class="btn-enviar" onclick="toggle()" />
+            </form>
+            <button class="btn-fechar" onclick="toggle()">Fechar</button>
+            <!-- =================== FOMULÁRIO ==================== -->
+        </div>
     </div>
+
+
     <script>
         function toggle() {
             var blur = document.getElementById("blur")
