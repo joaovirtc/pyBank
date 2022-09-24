@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a74e3185bb.js" crossorigin="anonymous"></script>
+    <script>"https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"</script>
 </head>
 
 <body>
@@ -159,7 +160,7 @@
                     <input type="text" name="senha" class="input" required>
                     <label for="nome">Valor</label>
                 </div>
-                <input type="submit" class="btn-enviar" onclick="toggle()" />
+                <input type="submit" class="btn-enviar" onclick="abrirAlerta()" />
             </form>
             <button class="btn-fechar" onclick="toggle()">Fechar</button>
             <!-- =================== FOMULÁRIO ==================== -->
@@ -177,6 +178,20 @@
             popup.classList.toggle("active")
         }
 
+
+
+        // function abrirAlerta() {
+        //     var dialog = bootbox.dialog({
+        //         title: 'Enviando seu pix',
+        //         message: '<p><i class="ri-loader-4-line"></i></p>'
+        //     });
+
+        //     dialog.init(function () {
+        //         setTimeout(function () {
+        //             dialog.find('.bootbox-body').html('I was loaded after the dialog was shown!');
+        //         }, 3000);
+        //     });
+        // }
 
     </script>
 </body>
