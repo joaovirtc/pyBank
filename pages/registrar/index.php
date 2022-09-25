@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="form">
 
     <main>
 
@@ -27,7 +27,7 @@
 
 
             <!-- abrindo o formulario de criaçao de conta -->
-            <form action="validar.php" method="POST" >
+            <form  action="validar.php" method="POST" >
                 <h2>CRIE SUA CONTA!</h2>
 
                 <!-- INPUT NOME -->
@@ -91,7 +91,7 @@
                     <?php 
                     // aparecer mensagem de erro caso tenha
                         if(isset($_SESSION['err_email'])){
-                            echo ("<p class=\"validar active\">{$_SESSION['err_email']}</p>");
+                            echo ("<p id=\"msg_php\"class=\"validar active\">{$_SESSION['err_email']}</p>");
                         };
                         // limpando a session de erro
                         unset($_SESSION['err_email']);
