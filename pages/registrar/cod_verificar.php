@@ -12,6 +12,9 @@ if($usuario == $cod){
     $senha = $_SESSION['senha'];       
     $conta = mt_rand(1111111111111111,9999999999999999);
     $sql = $conexao->query("INSERT INTO user VALUES ('id_user', '$nome','$email', '$senha', 800.00, '$conta')");
+    unset($_SESSION['nome']);
+    unset($_SESSION['email']);
+    unset($_SESSION['senha']);
     header('location: ../login/index.php');
     
 }

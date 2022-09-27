@@ -27,7 +27,7 @@
 
 
             <!-- abrindo o formulario de criaçao de conta -->
-            <form  action="validar.php" method="POST" >
+            <form  action="validar.php" method="POST" id="form">
                 <h2>CRIE SUA CONTA!</h2>
 
                 <!-- INPUT NOME -->
@@ -96,7 +96,7 @@
                         // limpando a session de erro
                         unset($_SESSION['err_email']);
                     ?>
-                    <input type="submit" value="CRIAR CONTA" name="env" class="submit">
+                    <input type="submit" value="CRIAR CONTA" name="env" class="submit" id="env">
                 </div>
 
 

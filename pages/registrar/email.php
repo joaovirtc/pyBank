@@ -30,13 +30,13 @@ use PHPMailer\PHPMailer\Exception;
 
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'Here is the subject';
-        $mail->Body    = "This is the HTML message body {$cod_valid}";
+        $mail->Subject = 'Codigo de verificaçao';
+        $mail->Body    = "Ola {$nome}, seu codigo de verificaçao é {$cod_valid} <br>Obrigado por fazer parte da pyBank!!!";
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         $mail->send();
-        $msg = 'Message has been sent';
+        $msg = 'Codigo de verificaçao enviado com sucesso';
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        echo "nao foi possivel enviar o codigo de verificaçao: {$mail->ErrorInfo}";
     };
 ?>

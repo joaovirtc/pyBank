@@ -40,7 +40,7 @@
                 <!-- INPUT EMAIL -->
                 <div class="single-input">
                     <input type="email" name="email" class="input" required>
-                    <label for="nome">E-mail</label>
+                    <label for="email">E-mail</label>
                 </div>
             <?php 
                 if(isset($_SESSION['err_email'])){
@@ -52,7 +52,7 @@
                 <!-- INPUT SENHA -->
                 <div class="single-input">
                     <input type="password" name="senha" class="input" required>
-                    <label for="nome">Senha</label>
+                    <label for="senha">Senha</label>
                 </div>
 
 
