@@ -1,3 +1,8 @@
+<?php
+    session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,6 +80,12 @@
                 </div>
                 <div class="grafico">
                     <p>EM BREVE</p>
+                    <?php
+                        if(isset($_SESSION['enviado'])){
+                            echo("<p>enviado com sucesso</p>");
+                            unset($_SESSION['enviado']);
+                        }
+                    ?>
                 </div>
             </div>
 
@@ -145,7 +156,7 @@
 
             <!-- =================== FOMULÁRIO ==================== -->
 
-            <form action="" class="form-pix">
+            <form id="form" action="pix.php" class="form-pix" method="POST">
 
                 <!-- ================= INPUT CHAVE DO PIX =============== -->
 
@@ -160,7 +171,7 @@
                     <input type="text" name="senha" class="input" required>
                     <label for="nome">Valor</label>
                 </div>
-                <input type="submit" class="btn-enviar" onclick="abrirAlerta()" />
+                <input name="submit" id="submit" type="submit" class="btn-enviar" onclick="abrirAlerta()" />
             </form>
             <button class="btn-fechar" onclick="toggle()">Fechar</button>
             <!-- =================== FOMULÁRIO ==================== -->
@@ -171,29 +182,32 @@
 
 
     <script>
-        function toggle() {
-            var blur = document.getElementById("blur")
-            blur.classList.toggle("active")
-            var popup = document.getElementById("popup")
-            popup.classList.toggle("active")
+        
+
+
+        let interacao = document.getElementById("submit");
+        
+
+
+
+
+interacao.addEventListener("click", abrirAlerta());
+
+        function abrirAlerta() {
+            let dialog = bootbox.dialog({
+                title: 'Enviando seu pix',
+                message: '<p><i class="ri-loader-4-line"></i></p>'
+            });
+
+            dialog.init(function () {
+                setTimeout(function () {
+                    dialog.find('.bootbox-body').html('I was loaded after the dialog was shown!');
+                }, 3000);
+            });
         }
 
-
-
-        // function abrirAlerta() {
-        //     var dialog = bootbox.dialog({
-        //         title: 'Enviando seu pix',
-        //         message: '<p><i class="ri-loader-4-line"></i></p>'
-        //     });
-
-        //     dialog.init(function () {
-        //         setTimeout(function () {
-        //             dialog.find('.bootbox-body').html('I was loaded after the dialog was shown!');
-        //         }, 3000);
-        //     });
-        // }
-
     </script>
+    <script src="app.js"></script>
 </body>
 
 </html>
