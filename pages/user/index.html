@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a74e3185bb.js" crossorigin="anonymous"></script>
     <script>"https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"</script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -178,20 +179,21 @@
             popup.classList.toggle("active")
         }
 
+        function abrirAlerta() {
+            let dialog = bootbox.dialog({
+                title: 'A custom dialog with init',
+                message: '<p><i class="fa fa-spin fa-spinner"></i> Loading...</p>'
+            });
+
+            dialog.init(function () {
+                setTimeout(function () {
+                    dialog.find('.bootbox-body').html('I was loaded after the dialog was shown!');
+                }, 3000);
+            });
+        }
 
 
-        // function abrirAlerta() {
-        //     var dialog = bootbox.dialog({
-        //         title: 'Enviando seu pix',
-        //         message: '<p><i class="ri-loader-4-line"></i></p>'
-        //     });
 
-        //     dialog.init(function () {
-        //         setTimeout(function () {
-        //             dialog.find('.bootbox-body').html('I was loaded after the dialog was shown!');
-        //         }, 3000);
-        //     });
-        // }
 
     </script>
 </body>
