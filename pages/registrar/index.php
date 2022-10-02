@@ -1,9 +1,9 @@
-<?php 
+ <?php 
     session_start();
     unset($_SESSION['nome']);
     unset($_SESSION['email']);
     unset($_SESSION['senha']);
-?>
+?> 
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -25,61 +25,75 @@
 
         <div class="container__form">
 
+            <div class="Div-form">
 
+<<<<<<< HEAD
+                <form action="validar.php" method="POST">
+                    <h2>CRIE SUA CONTA</h2>
+=======
             <!-- abrindo o formulario de criaçao de conta -->
             <form  action="validar.php" method="POST" id="form">
                 <h2>CRIE SUA CONTA!</h2>
+>>>>>>> 7d836006b6841458ff239f67261b48215a48eddc
 
-                <!-- INPUT NOME -->
-                <div class="single-input">
-                    <input type="text" name="nome" class="input" id="nome" required>
-                    <label for="nome">Nome</label>
-                </div>
-                <!-- <div class="single-input">
-                    <input type="text" name="nome" class="input" id="nome">
-                    <label for="nome">Nome</label>
-                </div> -->
+                    <!-- INPUT NOME -->
+                    <div class="single-input">
+                        <input type="text" name="nome" class="input" id="nome" required>
+                        <label for="nome">Nome</label>
+                    </div>
 
 
 
-                <!-- INPUT CPF -->
-                <!-- <div class="single-input">
-                    <input type="text" name="nome" class="input" id="nome" required>
-                    <label for="nome">Nome</label>
-                </div> -->
-                <!-- <label for="cpf">CPF</label>
-                <input type="number" name="cpf" class="text-input"> -->
-
-
-
-                <!-- INPUT EMAIL -->
-                <div class="single-input">
-                    <input type="email" name="email" class="input" required>
-                    <label for="nome">E-mail</label>
-                </div>
-                <!-- <label for="email">E-mail</label>
-                <input type="email" name="email" class="text-input"> -->
+                    <!-- INPUT EMAIL -->
+                    <div class="single-input">
+                        <input type="email" name="email" class="input" required>
+                        <label for="nome">E-mail</label>
+                    </div>
 
 
 
 
 
-                <!-- INPUT SENHA -->
-                <div class="single-input">
-                    <input type="password" name="senha" class="input validar" onchange="validarPassword()" id="password" required>
-                    <label for="nome">Senha</label>
-                </div>
-                <!-- <label for="senha">Senha</label>
-                <input type="text" name="senha" onchange="validarPassword()" id="password" class="text-input"> -->
+                    <!-- INPUT SENHA -->
+                    <div class="single-input">
+                        <input type="password" name="senha" class="input validar" onchange="validarPassword()"
+                            id="password" required>
+                        <label for="nome">Senha</label>
+                    </div>
 
 
 
-                <!-- INPUT COMFIRMAR SENHA -->
-                <div class="single-input">
-                    <input type="password" name="confirmar" class="input validar" onchange="validarPassword()" id="confirm_password" required>
-                    <label for="nome">Confirme sua senha</label>
+                    <!-- INPUT COMFIRMAR SENHA -->
+                    <div class="single-input">
+                        <input type="password" name="confirmar" class="input validar" onchange="validarPassword()"
+                            id="confirm_password" required>
+                        <label for="nome">Confirme sua senha</label>
+                    </div>
+
                     <p class="validar" id="validacao">Senhas diferentes</p>
+
+                    <!-- INPUT SUBMIT -->
+                    <div class="div__submit">
+                        <input type="submit" value="CRIAR CONTA" name="env" class="submit">
+                         <?php 
+                // aparecer mensagem de erro caso tenha
+                    if(isset($_SESSION['err_email'])){
+                        echo ("<p id=\"msg_php\"class=\"validar active\">{$_SESSION['err_email']}</p>");
+                    };
+                    // limpando a session de erro
+                    unset($_SESSION['err_email']);
+                ?> 
+                    </div>
+
+
+                </form>
+                <div class="links">
+                    <a href="">Já sou cliente</a>
+                    <a href="../../index.html">Voltar</a>
                 </div>
+<<<<<<< HEAD
+            </div>
+=======
                 <!-- <label for="confirmar"> Confirme sua senha</label>
                 <input type="text" name="confirmar" onchange="validarPassword()" id="confirm_password"
                     class="text-input"> -->
@@ -103,6 +117,7 @@
                 <a href="">Já sou cliente</a>
                 <a href="../../index.html">Voltar</a>
             </form>
+>>>>>>> 7d836006b6841458ff239f67261b48215a48eddc
         </div>
     </main>
 
@@ -113,5 +128,3 @@
 </body>
 
 </html>
-
-

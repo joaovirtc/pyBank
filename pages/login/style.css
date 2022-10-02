@@ -114,7 +114,7 @@ p{
     width: 79%;
     padding: 5px;
     border: 0;
-    border-bottom: 2px solid rgb(200,200,200);
+    border-bottom: 1px solid rgb(200,200,200);
     outline: 0;
     font-size: 16px;
     color: rgb(80,80,80);
@@ -123,13 +123,13 @@ p{
 
 .input:focus,
 .input:valid{
-    border-bottom: 2px solid #B03545;
+    border-bottom: 1px solid #b3b3b3;
 }
 .input:focus ~ label,
 .input:valid ~ label{
     transform: translateY(-24px);
     font-size: 12px;
-    color: #B03545;
+    color: #000;
 }
 
 
@@ -155,7 +155,6 @@ p{
 }
 
 .div__submit input:hover{
-    background-color: #D41F37;
     border-radius: 14px;
 }
 
