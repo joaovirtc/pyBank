@@ -8,6 +8,7 @@ function toggle() {
 }
 
 function toggle2() {
+
   var popup2 = document.getElementById("popup2");
-  popup2.classList.toggle("active");
+  popup2.classList.remove("active");
 }
