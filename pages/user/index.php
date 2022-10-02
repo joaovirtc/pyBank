@@ -1,11 +1,20 @@
 <?php
     session_start();
-    printf($_SESSION['id'])
+    require_once("../../assets/conexao.php");
+    if(!isset($_SESSION['id'])){
+        header("location: ../login/");
+    };
+    $id = $_SESSION['id'];
+    $nome = mysqli_fetch_array($conexao->query( "SELECT nome FROM user where id_user = $id"));
+    $nome = $nome[0];
+    $dinheiro = mysqli_fetch_array($conexao->query( "SELECT dinheiro FROM user where id_user = '$id'"));
+    $dinheiro = $dinheiro[0];
+    $dinheiro = number_format($dinheiro, 2, ',', '.');
 ?>
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -45,7 +54,7 @@
                 </div>
                 <div class="cartao">
                     <img src="../../assets/img/Card1.png" alt="">
-                    <p> R$ 1000</p>
+                    <p> R$ <?php echo($dinheiro)?></p>
                 </div>
                 <div class="cartao">
                     <img src="../../assets/img/card2.png" alt="">
