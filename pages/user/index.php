@@ -38,8 +38,9 @@
                     <img src="../../assets/img/logo.png" alt="">
                 </a>
             </div>
-            <div class="user-foto">
-                <i class="fas fa-user-circle"></i>
+            <div class="user">
+                <p>Bem vindo de volta,<strong> João!</strong></p>
+                <i class="ri-account-circle-fill"></i>
             </div>
         </nav>
     </header>
@@ -110,52 +111,20 @@
             </div>
             <div class="div-transacoes">
                 <div class="transacao-1">
-                    <div><i class="fa-solid fa-burger"></i></div>
-                    <div>
-                        <p>Comida</p>
-                    </div>
-                    <div>
-                        <p class="gasto">- R$ 57,70</p>
-                    </div>
-                </div>
-                <div class="transacao-2">
                     <div><i class="fa-brands fa-pix"></i></div>
                     <div>
                         <p>Pix recebido</p>
                     </div>
                     <div>
-                        <p class="recebido"> + R$ 100,00</p>
+                        <p class="recebido"> R$ 1.800,00</p>
                     </div>
                 </div>
-                <div class="transacao-3">
-                    <div><i class="fa-brands fa-amazon"></i></div>
-                    <div>
-                        <p>Amazon</p>
-                    </div>
-                    <div>
-                        <p class="gasto">- R$ 400,00</p>
-                    </div>
-                </div>
-                <div class="transacao-4">
-                    <div><i class="fa-brands fa-pix"></i></div>
-                    <div>
-                        <p>Pix enviado</p>
-                    </div>
-                    <div>
-                        <p class="gasto">- R$ 50,00</p>
-                    </div>
-                </div>
-            </div>
         </section>
 
 
     </main>
 
     <div id="popup">
-        <!-- <button class="button">
-            <span class="text-button">ENVIAR</span>
-            <i class="ri-check-line icon"></i>
-        </button> -->
         <div class="container-popup">
             <div><i class="fa-brands fa-pix icon-pix"></i></div>
 
@@ -176,12 +145,35 @@
                     <input type="text" name="senha" class="input" required>
                     <label for="nome">Valor</label>
                 </div>
-                <input name="submit" id="submit" type="submit" class="btn-enviar" />
             </form>
+
+            <input name="submit" id="submit" type="submit" class="btn-enviar" onclick="toggle2()" />
             <button class="btn-fechar" onclick="toggle()">Fechar</button>
-            <!-- =================== FOMULÁRIO ==================== -->
+
+            <!-- ================= FOMULÁRIO ==================== -->
         </div>
     </div>
+
+
+
+
+
+    <div id="popup2">
+        <img src="../../assets/img/gifCheck.gif" alt="" class="gifCheck">
+        <div>
+            <p>Seu pix foi enviado com sucesso !</p>
+        </div>
+
+        <!-- =============== FOMULARIO SUBMIT ================= -->
+        <form action="" class="formCheck">
+            <input type="submit" onclick="toggle2()" value="Fechar" class="fecharCheck">
+        </form>
+
+
+    </div>
+
+
+
 
     <script>
 
