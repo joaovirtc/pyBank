@@ -170,8 +170,7 @@
                 
             ");
             $_SESSION['enviado'] = false;
-        }
-    
+        };
     ?>
 
     
