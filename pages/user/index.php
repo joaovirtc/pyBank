@@ -12,7 +12,6 @@
     $dinheiro = number_format($dinheiro, 2, ',', '.');
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -39,6 +38,7 @@
                 </a>
             </div>
             <div class="user-foto">
+                <p><?php echo($nome)?></p>
                 <i class="fas fa-user-circle"></i>
             </div>
         </nav>
@@ -166,17 +166,17 @@
                 <!-- ================= INPUT CHAVE DO PIX =============== -->
 
                 <div class="single-input">
-                    <input type="text" name="senha" class="input" required>
+                    <input type="text" name="chave" class="input" required>
                     <label for="nome">Chave</label>
                 </div>
 
                 <!-- ================= INPUT VALOR =============== -->
 
                 <div class="single-input">
-                    <input type="text" name="senha" class="input" required>
+                    <input type="text" name="valor" class="input" required>
                     <label for="nome">Valor</label>
                 </div>
-                <input name="submit" id="submit" type="submit" class="btn-enviar" />
+                <input name="submit" id="submit" type="submit" class="btn-enviar" name="submit"/>
             </form>
             <button class="btn-fechar" onclick="toggle()">Fechar</button>
             <!-- =================== FOMULÁRIO ==================== -->
