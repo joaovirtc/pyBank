@@ -12,7 +12,6 @@
     $dinheiro = number_format($dinheiro, 2, ',', '.');
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -38,6 +37,7 @@
                     <img src="../../assets/img/logo.png" alt="">
                 </a>
             </div>
+
             <div class="user">
                 <p>Bem vindo de volta,<strong> João!</strong></p>
                 <i class="ri-account-circle-fill"></i>
@@ -135,16 +135,17 @@
                 <!-- ================= INPUT CHAVE DO PIX =============== -->
 
                 <div class="single-input">
-                    <input type="text" name="senha" class="input" required>
+                    <input type="text" name="chave" class="input" required>
                     <label for="nome">Chave</label>
                 </div>
 
                 <!-- ================= INPUT VALOR =============== -->
 
                 <div class="single-input">
-                    <input type="text" name="senha" class="input" required>
+                    <input type="text" name="valor" class="input" required>
                     <label for="nome">Valor</label>
                 </div>
+
             </form>
 
             <input name="submit" id="submit" type="submit" class="btn-enviar" onclick="toggle2()" />
