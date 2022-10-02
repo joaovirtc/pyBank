@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
     session_start();
     if(isset($_POST['sair'])){
         unset($_SESSION['cpf']);
@@ -6,9 +6,9 @@
     }
     // print_r($_SESSION);
     if((isset($_SESSION['cpf']) == true) and (isset($_SESSION['senha']) == true)){
-        header('location: ../index.php');
+        header('location: ../user');
     }
-?> -->
+?>
 
 
 <!DOCTYPE html>
@@ -33,41 +33,31 @@
 
 
             <!-- abrindo o formulario de criaçao de conta -->
-            <form action="validar.php" method="POST">
+            <form action="testeLogin.php" method="POST">
                 <div class="text-form">
                     <h2>FAÇA SEU LOGIN</h2>
                 </div>
-
-
                 <!-- INPUT EMAIL -->
                 <div class="single-input">
                     <input type="email" name="email" class="input" required>
-                    <label for="nome">E-mail</label>
+                    <label for="email">E-mail</label>
                 </div>
-                <!-- <label for="email">E-mail</label>
-                <input type="email" name="email" class="text-input"> -->
-
-
-                <!-- <?php 
-            if(isset($_SESSION['err_email'])){
-                echo ("<p class=\"validar active\">{$_SESSION['err_email']}</p>");
-            };
-
-        ?>   -->
+            <?php 
+                if(isset($_SESSION['err_email'])){
+                    echo ("<p class=\"validar active\">{$_SESSION['err_email']}</p>");
+                };
+            ?> 
 
 
                 <!-- INPUT SENHA -->
                 <div class="single-input">
                     <input type="password" name="senha" class="input" required>
-                    <label for="nome">Senha</label>
+                    <label for="senha">Senha</label>
                 </div>
-                <!-- <label for="senha">Senha</label>
-                <input type="text" name="senha" onchange="validarPassword()" id="password" class="text-input"> -->
 
 
                 <!-- INPUT SUBMIT -->
                 <div class="div__submit">
-                    <p class="validar" id="validacao">Senhas diferentes</p>
                     <input type="submit" value="CONTINUAR" name="submit" class="submit">
                 </div>
 

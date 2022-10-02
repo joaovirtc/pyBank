@@ -27,8 +27,14 @@
 
             <div class="Div-form">
 
+<<<<<<< HEAD
                 <form action="validar.php" method="POST">
                     <h2>CRIE SUA CONTA</h2>
+=======
+            <!-- abrindo o formulario de criaçao de conta -->
+            <form  action="validar.php" method="POST" id="form">
+                <h2>CRIE SUA CONTA!</h2>
+>>>>>>> 7d836006b6841458ff239f67261b48215a48eddc
 
                     <!-- INPUT NOME -->
                     <div class="single-input">
@@ -85,7 +91,33 @@
                     <a href="">Já sou cliente</a>
                     <a href="../../index.html">Voltar</a>
                 </div>
+<<<<<<< HEAD
             </div>
+=======
+                <!-- <label for="confirmar"> Confirme sua senha</label>
+                <input type="text" name="confirmar" onchange="validarPassword()" id="confirm_password"
+                    class="text-input"> -->
+
+
+
+                <!-- INPUT SUBMIT -->
+                <div class="div__submit">
+                    <?php 
+                    // aparecer mensagem de erro caso tenha
+                        if(isset($_SESSION['err_email'])){
+                            echo ("<p id=\"msg_php\"class=\"validar active\">{$_SESSION['err_email']}</p>");
+                        };
+                        // limpando a session de erro
+                        unset($_SESSION['err_email']);
+                    ?>
+                    <input type="submit" value="CRIAR CONTA" name="env" class="submit" id="env">
+                </div>
+
+
+                <a href="">Já sou cliente</a>
+                <a href="../../index.html">Voltar</a>
+            </form>
+>>>>>>> 7d836006b6841458ff239f67261b48215a48eddc
         </div>
     </main>
 

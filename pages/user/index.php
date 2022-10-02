@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    printf($_SESSION['id'])
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a74e3185bb.js" crossorigin="anonymous"></script>
-    <script>"https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"</script>
+    <script src="iziToast.min.js" type="text/javascript"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
@@ -146,7 +152,7 @@
 
             <!-- =================== FOMULÁRIO ==================== -->
 
-            <form action="" class="form-pix">
+            <form id="form" class="form-pix" method="POST">
 
                 <!-- ================= INPUT CHAVE DO PIX =============== -->
 
@@ -161,41 +167,17 @@
                     <input type="text" name="senha" class="input" required>
                     <label for="nome">Valor</label>
                 </div>
-                <input type="submit" class="btn-enviar" onclick="abrirAlerta()" />
+                <input name="submit" id="submit" type="submit" class="btn-enviar" />
             </form>
             <button class="btn-fechar" onclick="toggle()">Fechar</button>
             <!-- =================== FOMULÁRIO ==================== -->
         </div>
     </div>
 
-
-
-
     <script>
-        function toggle() {
-            var blur = document.getElementById("blur")
-            blur.classList.toggle("active")
-            var popup = document.getElementById("popup")
-            popup.classList.toggle("active")
-        }
-
-        function abrirAlerta() {
-            let dialog = bootbox.dialog({
-                title: 'A custom dialog with init',
-                message: '<p><i class="fa fa-spin fa-spinner"></i> Loading...</p>'
-            });
-
-            dialog.init(function () {
-                setTimeout(function () {
-                    dialog.find('.bootbox-body').html('I was loaded after the dialog was shown!');
-                }, 3000);
-            });
-        }
-
-
-
 
     </script>
+    <script src="app.js"></script>
 </body>
 
 </html>
