@@ -35,13 +35,17 @@ img {
     height: auto;
 }
 
-.user-foto{
-    width: 100px;
+.user i {
+    font-size: 2.5rem;
+}
+
+.user{
+    width: 240px;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: 2rem;
+    
 }
 
 main{
@@ -198,7 +202,6 @@ filter: blur(20px);
 
 /* ======================== POPUP ====================== */
 
-
 #popup{
     position: fixed;
     top: 50%;
@@ -220,7 +223,73 @@ filter: blur(20px);
     opacity: 1;
     left: 50%;
     transition: .5s;
+} 
+
+
+
+
+ #popup2{
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    padding: 50px;
+    background-color:#fff;
+    border: 1px solid #ccc;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
 }
+#popup2.active{
+    visibility: visible;
+    opacity: 1;
+    left: 50%;
+    transition: .5s;
+} 
+
+.gifCheck{
+    max-width: 100%;
+    height: auto;
+}
+
+.fecharCheck{
+    
+    width: 95%;
+    height: 100%;
+    cursor: pointer;    
+    background-color: transparent;
+    border: 1px solid #B03545;
+    color: #B03545;
+    font-size: 16px;
+    transition: border-radius .5s,
+    border .5s;
+    font-weight: 500;
+
+}
+
+.fecharCheck:hover{
+        border-radius: 14px;
+}
+
+.formCheck{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    padding-top: 2rem;
+}
+
+
+
+
 
 
 .container-popup{
@@ -246,6 +315,7 @@ filter: blur(20px);
     align-items: center;
     flex-direction: column;
 }
+
 
 
 .single-input{
@@ -304,6 +374,7 @@ filter: blur(20px);
     transition: border-radius .5s,
     background-color .5s;
     font-weight: 500;
+    margin: 10px 0;
 }
 
 .btn-enviar:hover{
@@ -311,7 +382,7 @@ filter: blur(20px);
 }
 .btn-fechar{
     width: 95%;
-    height: 11%;
+    height: 13%;
     cursor: pointer;    
     background-color: transparent;
     border: 1px solid #B03545;
@@ -327,47 +398,6 @@ filter: blur(20px);
     border: 1px solid #D41F37;
 }
 
-/* .button{
-    position: relative;
-    width: 70px;
-    height: 30px;
-    font-size: 10px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 14px;
-    cursor: pointer;
-    transition: width .5s,
-    border-radius .5s;
-}
-
-.button *{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: opacity .5s;
-}
-
-.icon{
-    opacity: 0;
-}
-
-.button:focus{
-    width: 30px;
-    background-color: #44c08a;
-    border-radius: 50%;
-}
-
-
-.button:focus .text-button{
-    opacity: 0;
-}
-
-.button:focus .icon{
-    opacity: 1;
-    transition-delay:.5s ;
-} */
 
 
 
@@ -378,7 +408,7 @@ filter: blur(20px);
     width: 90%;
     height: 95%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 }
@@ -402,33 +432,7 @@ filter: blur(20px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-}
-.transacao-2{
-    width: 90%;
-    border-bottom: 1px solid #0003;
-    height: 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-.transacao-3{
-    width: 90%;
-    border-bottom: 1px solid #0003;
-    height: 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-.transacao-4{
-    width: 90%;
-    border-bottom: 1px solid #0003;
-    height: 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding-top: 4rem;
 
 }
 
@@ -484,6 +488,21 @@ filter: blur(20px);
         width: 95vw;
         border: none;
     
+    }
+
+
+
+
+}
+
+
+@media screen and (max-width:480px) {
+    
+    #popup{
+        width: 270px;
+    }
+    #popup2{
+        width: 270px;
     }
 
 
