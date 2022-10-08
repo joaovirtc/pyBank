@@ -37,16 +37,18 @@
                     <img src="../../assets/img/logo.png" alt="">
                 </a>
             </div>
-
+    
             <div class="user">
-                <p>Bem vindo de volta,<strong> João!</strong></p>
-                <i class="ri-account-circle-fill"></i>
+                <p>Bem vindo de volta, <strong><?php echo ( $nome)?>!</strong></p>
+                <i class="ri-account-circle-fill Iuser"></i>
+                <a href="logout.php" class="logout"><i class="ri-logout-circle-line Ilogout"></i></a>
             </div>
         </nav>
     </header>
 
 
-    <main id="blur">
+    <main id="blur"<?php if($_SESSION['enviado'] === true){ echo ("class=\"active\"");};
+    ?>>
         <!-- ========================= MEUS CARTÕES ============== -->
         <section class="container-1">
             <div class="div-meus-cartoes">
@@ -122,7 +124,7 @@
         </section>
 
 
-    </main>
+    </main >
 
     <div id="popup">
         <div class="container-popup">
@@ -130,7 +132,7 @@
 
             <!-- =================== FOMULÁRIO ==================== -->
 
-            <form id="form" class="form-pix" method="POST">
+            <form id="form" action="pix.php" class="form-pix" method="POST">
 
                 <!-- ================= INPUT CHAVE DO PIX =============== -->
 
@@ -145,10 +147,10 @@
                     <input type="text" name="valor" class="input" required>
                     <label for="nome">Valor</label>
                 </div>
-
+                <input name="submit" id="submit" type="submit" class="btn-enviar"/>
             </form>
 
-            <input name="submit" id="submit" type="submit" class="btn-enviar" onclick="toggle2()" />
+            
             <button class="btn-fechar" onclick="toggle()">Fechar</button>
 
             <!-- ================= FOMULÁRIO ==================== -->
@@ -157,21 +159,23 @@
 
 
 
+    <?php 
+        if($_SESSION['enviado'] === true){
+            echo ("    
+                <div id=\"popup2\" class=\"active\">
+                    <img src=\"../../assets/img/gifCheck.gif\" class=\"gifCheck\">
+                    <div>
+                        <p>Seu pix foi enviado com sucesso !</p>
+                    </div>
+                    <button class=\"fecharCheck\" onclick=\"toggle2()\">Fechar</button>
+                </div>
+                
+            ");
+            $_SESSION['enviado'] = false;
+        };
+    ?>
 
-
-    <div id="popup2">
-        <img src="../../assets/img/gifCheck.gif" alt="" class="gifCheck">
-        <div>
-            <p>Seu pix foi enviado com sucesso !</p>
-        </div>
-
-        <!-- =============== FOMULARIO SUBMIT ================= -->
-        <form action="" class="formCheck">
-            <input type="submit" onclick="toggle2()" value="Fechar" class="fecharCheck">
-        </form>
-
-
-    </div>
+    
 
 
 
