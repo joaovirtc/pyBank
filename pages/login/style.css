@@ -55,7 +55,7 @@ header img {
 
 
 form {
-    width: 30%;
+    width: 35%;
     height: 100%;
     background-color: #fff;
     display: flex;
@@ -100,8 +100,8 @@ p{
 }
 .single-input label{
     position: absolute;
-    bottom: 5px;
-    left: 35px;
+    bottom: 10px;
+    left: 40px;
     color: #b3b3b3;
     cursor: text;
     transition: 0.2s ease-in-out;
@@ -148,8 +148,8 @@ p{
     border: none;
     background-color: #B03545;
     color: #fff;
+    font-size: 17px;
     font-weight: bold;
-    font-size: 15px;
     cursor: pointer;
     transition: background-color .2s, border-radius .2s;
 }

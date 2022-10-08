@@ -58,7 +58,7 @@ header img {
 
 
 .Div-form {
-    width: 30%;
+    width: 35%;
     height: 100%;
     background-color: #fff;
     display: flex;
@@ -111,8 +111,8 @@ p{
 }
 .single-input label{
     position: absolute;
-    bottom: 8px;
-    left: 30px;
+    bottom: 10px;
+    left: 40px;
     color: #b3b3b3;
     cursor: text;
     transition: 0.2s ease-in-out;
