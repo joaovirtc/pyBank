@@ -1,11 +1,10 @@
-<?php
+<?php 
     session_start();
-    if(isset($_POST['sair'])){
-        unset($_SESSION['cpf']);
-        unset($_SESSION['senha']);
+    if(isset($_SESSION['sair']) === true){
+        unset($_SESSION['id']);
     }
     // print_r($_SESSION);
-    if((isset($_SESSION['cpf']) == true) and (isset($_SESSION['senha']) == true)){
+    if((isset($_SESSION['id']))){
         header('location: ../user');
     }
 ?>

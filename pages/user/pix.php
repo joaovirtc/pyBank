@@ -17,6 +17,11 @@
     $dinheiro_destinatario = $dinheiro_destinatario + $valor;
     $pix = $conexao->query("UPDATE user SET dinheiro = '$dinheiro_destinatario' WHERE id_user = '$id_destinatario';");
     $_SESSION['enviado'] = true;
-    header("location: index.php");
+
+    // gerando historico
+    $historico = $conexao->query("INSERT INTO `pix`(`id_pix`, `valor`, `remetente`, `destinatario`) VALUES (id_pix,'$valor','$id','$id_destinatario');");
+    $_SESSION['token'] = mt_rand(1111,9999);
+    $token = $_SESSION['token'];
+    header("location: index.php?href={$token}");
 
 ?>

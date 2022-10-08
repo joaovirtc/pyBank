@@ -47,7 +47,10 @@
     </header>
 
 
-    <main id="blur"<?php if($_SESSION['enviado'] === true){ echo ("class=\"active\"");};
+    <main id="blur"<?php if(isset($_GET['href'])) {
+        if($_GET['href'] == $_SESSION['token']){ echo ("class=\"active\"");};
+        $_SESSION['token'] = mt_rand(1111,9999);
+    } 
     ?>>
         <!-- ========================= MEUS CARTÕES ============== -->
         <section class="container-1">
@@ -112,6 +115,43 @@
                 </div>
             </div>
             <div class="div-transacoes">
+                <?php 
+                    $historico =  $conexao->query("SELECT * FROM pix WHERE remetente = '$id' or destinatario = '$id' ORDER BY id_pix DESC");
+                    foreach ($historico as $row) {
+                        $valor = $row["valor"];
+                        if($row["remetente"] === $id){
+                            echo("
+                                <div class=\"transacao-1\">
+                                    <div><i class=\"fa-brands fa-pix\"></i></div>
+                                    <div>
+                                        <p>Pix enviado</p>
+                                    </div>
+                                    <div>
+                                        <p class=\"enviado\"> R$ {$valor}</p>
+                                    </div>
+                                </div>
+                                
+                            ");
+                        };
+                        if($row["destinatario"] === $id){
+                            echo("
+                                <div class=\"transacao-1\">
+                                    <div><i class=\"fa-brands fa-pix\"></i></div>
+                                    <div>
+                                        <p>Pix recebido</p>
+                                    </div>
+                                    <div>
+                                        <p class=\"recebido\"> R$ {$valor}</p>
+                                    </div>
+                                </div>
+                                
+                            ");
+                        };
+                    };
+                
+                
+                ?>
+                <!-- $row["id_pix"] -->
                 <div class="transacao-1">
                     <div><i class="fa-brands fa-pix"></i></div>
                     <div>
@@ -120,7 +160,7 @@
                     <div>
                         <p class="recebido"> R$ 1.800,00</p>
                     </div>
-                </div>
+                </div>    
         </section>
 
 
@@ -158,10 +198,10 @@
     </div>
 
 
-
     <?php 
         if($_SESSION['enviado'] === true){
-            echo ("    
+            echo (" 
+                
                 <div id=\"popup2\" class=\"active\">
                     <img src=\"../../assets/img/gifCheck.gif\" class=\"gifCheck\">
                     <div>
@@ -172,6 +212,7 @@
                 
             ");
             $_SESSION['enviado'] = false;
+            
         };
     ?>
 
@@ -180,10 +221,7 @@
 
 
 
-    <script>
-
-    </script>
-    <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 
 </html>
