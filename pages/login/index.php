@@ -42,11 +42,11 @@
                     <input type="email" name="email" class="input" required>
                     <label for="email">E-mail</label>
                 </div>
-            <?php 
+                <?php 
                 if(isset($_SESSION['err_email'])){
                     echo ("<p class=\"validar active\">{$_SESSION['err_email']}</p>");
                 };
-            ?> 
+            ?>
 
 
                 <!-- INPUT SENHA -->
@@ -58,7 +58,7 @@
 
                 <!-- INPUT SUBMIT -->
                 <div class="div__submit">
-                    <input type="submit" value="CONTINUAR" name="submit" class="submit">
+                    <input type="submit" value="Entrar" name="submit" class="submit">
                 </div>
 
                 <div class="links">
