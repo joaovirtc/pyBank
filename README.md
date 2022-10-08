@@ -38,5 +38,7 @@ pyBank é um banco 100% digital, buscando a melhor expêriencia para o usuário.
 - [@kawan-lopes](https://www.github.com/kawan-lopes)
 
 - [@joaovirtc](https://www.github.com/joaovirtc)
+- [@joaovirtc](https://www.github.com/joaovirtc)
+- [@joaovirtc](https://www.github.com/joaovirtc)
 
 ![Logo](./assets/img/preview.png)
