@@ -1,9 +1,9 @@
- <?php 
+<?php 
     session_start();
     unset($_SESSION['nome']);
     unset($_SESSION['email']);
     unset($_SESSION['senha']);
-?> 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -69,14 +69,14 @@
                     <!-- INPUT SUBMIT -->
                     <div class="div__submit">
                         <input type="submit" value="CRIAR CONTA" name="env" class="submit">
-                         <?php 
+                        <!-- <?php 
                 // aparecer mensagem de erro caso tenha
                     if(isset($_SESSION['err_email'])){
                         echo ("<p id=\"msg_php\"class=\"validar active\">{$_SESSION['err_email']}</p>");
                     };
                     // limpando a session de erro
                     unset($_SESSION['err_email']);
-                ?> 
+                ?>  -->
                     </div>
 
 
