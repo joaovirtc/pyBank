@@ -7,22 +7,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>checkout</title>
 </head>
 <body>
-    <form action="cod_verificar.php" method="POST">
-        <h2>codigo de verificaçao</h2>
-        <p>Acabamos de enviar um codigo para o seu email, digite o codigo enviado</p>
-        <input type="text" name="codigo_user" required>
-        <input type="submit" value="Confirmar codigo" name="enviar">
-        
-    </form>
-    <form action="#" method="POST">
-        <input type="submit" value="enviar novamente" name="nv_codigo">
-    </form>
-    <form action="#" method="POST">
-        <input type="submit" value="cancelar" name="voltar">
-    </form>
+    <main>
+        <header>
+            <a href="../../index.html"><img src="../8.png" alt="LOGO"></a>
+        </header>
+        <div class="container__form">
+            <form action="cod_verificar.php" method="POST">
+            <div class="text-form">
+                    <h2>CÓDIGO DE VERIFICAÇÃO</h2>
+                    <p>Acabamos de enviar um código no seu e-mail
+                        cheque e o digite abaixo</p>
+            </div>
+            <div class="single-input">
+                    <input type="text" name="codigo_user" class="input" required>
+                    <label for="codigo_user">Digite o código</label>
+            </div>
+            <div class="links">
+                    <input type="submit" class="primario" value="Enviar" name="enviar">
+                    <a href="../../index.html" class="secundario">Voltar</a>
+                    <a href="../../index.html" class="secundario">Enviar novamente</a>
+            </div>
+
+
+        </div>
+    </main>
+
 </body>
 </html>
 
@@ -54,7 +67,5 @@
         header('location: ./checkout.php');
     };
     // volta para o registro
-    if(isset($_POST['voltar'])){
-        header("location: index.php");
-    }  
+
 ?>

@@ -37,10 +37,24 @@ img {
 
 .user i {
     font-size: 2.5rem;
+    cursor: pointer;
 }
 
+.Ilogout{
+    color:red;
+    transition: color .5s;
+
+}
+.Ilogout:hover{
+color: #B03545;
+}
+.logout{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
 .user{
-    width: 270px;
+    width: 320px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -262,7 +276,7 @@ filter: blur(20px);
 .fecharCheck{
     
     width: 95%;
-    height: 100%;
+    height: 10%;
     cursor: pointer;    
     background-color: transparent;
     border: 1px solid #B03545;
@@ -271,6 +285,7 @@ filter: blur(20px);
     transition: border-radius .5s,
     border .5s;
     font-weight: 500;
+    margin-top: 1rem;
 
 }
 
@@ -382,7 +397,7 @@ filter: blur(20px);
 }
 .btn-fechar{
     width: 95%;
-    height: 13%;
+    height: 11%;
     cursor: pointer;    
     background-color: transparent;
     border: 1px solid #B03545;

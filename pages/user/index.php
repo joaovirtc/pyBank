@@ -37,16 +37,18 @@
                     <img src="../../assets/img/logo.png" alt="">
                 </a>
             </div>
-
+    
             <div class="user">
                 <p>Bem vindo de volta, <strong><?php echo ( $nome)?>!</strong></p>
-                <i class="ri-account-circle-fill"></i>
+                <i class="ri-account-circle-fill Iuser"></i>
+                <a href="logout.php" class="logout"><i class="ri-logout-circle-line Ilogout"></i></a>
             </div>
         </nav>
     </header>
 
 
-    <main id="blur">
+    <main id="blur"<?php if($_SESSION['enviado'] === true){ echo ("class=\"active\"");};
+    ?>>
         <!-- ========================= MEUS CARTÕES ============== -->
         <section class="container-1">
             <div class="div-meus-cartoes">
@@ -122,7 +124,7 @@
         </section>
 
 
-    </main>
+    </main >
 
     <div id="popup">
         <div class="container-popup">
@@ -165,7 +167,7 @@
                     <div>
                         <p>Seu pix foi enviado com sucesso !</p>
                     </div>
-                    <button class=\"fecharCheck\" onclick=\"toggle2()\">fechar</button>
+                    <button class=\"fecharCheck\" onclick=\"toggle2()\">Fechar</button>
                 </div>
                 
             ");
