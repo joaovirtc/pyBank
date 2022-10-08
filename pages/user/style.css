@@ -35,7 +35,7 @@ img {
     height: auto;
 }
 
-.user i {
+.Iuser {
     font-size: 2.5rem;
     cursor: pointer;
 }
@@ -43,6 +43,7 @@ img {
 .Ilogout{
     color:red;
     transition: color .5s;
+    font-size: 1.5rem;
 
 }
 .Ilogout:hover{
@@ -54,7 +55,7 @@ color: #B03545;
     justify-content: center;
 }
 .user{
-    width: 320px;
+    width: 310px;
     height: 100%;
     display: flex;
     justify-content: space-between;
