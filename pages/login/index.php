@@ -62,8 +62,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="">Ainda não sou cliente</a>
-                    <a href="../../index.html">Voltar</a>
+                    <a href="#">Esqueci minha senha</a>
+                    <a href="#">Ainda não sou cliente</a>
                 </div>
             </form>
         </div>

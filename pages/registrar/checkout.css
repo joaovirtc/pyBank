@@ -146,24 +146,25 @@ p{
     width: 72%;
     background-color: #B03545;
     color: #fff;
-    transition: border-radius .5s;
+    transition: background-color .3s;
     margin-bottom: 10px;
     font-size: 15px;
     font-weight: bold;
     text-align: center;
-    padding: 0.8rem;
+    padding: 0.9rem 0 ;
     outline: none;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 
    
 }
 
 .primario:hover{
-    border-radius: 14px;
+   background-color: #D41F37;
 }
 .secundario {
-    width: 67%;
+    width: 72%;
     background-color: transparent;
     transition:border-radius .5s;
     color: #B03545;
@@ -172,13 +173,11 @@ p{
     font-size: 15px;
     font-weight: bold;
     text-align: center;
-    padding: 0.7rem;
+    padding: 0.8rem 0 ;
+    border-radius: 5px;
    
 }
 
-.secundario:hover{
-  border-radius: 14px;
-}
 
 
 .terciario{

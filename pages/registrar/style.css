@@ -162,11 +162,14 @@ p{
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
-    transition: background-color .2s, border-radius .2s;
+    transition: background-color .3s;
+    border-radius: 5px;
 }
 
 .div__submit input:hover{
-    border-radius: 14px;
+
+  background-color: #D41F37;
+
 }
 
 
