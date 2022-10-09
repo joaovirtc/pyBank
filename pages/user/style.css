@@ -55,7 +55,7 @@ color: #B03545;
     justify-content: center;
 }
 .user{
-    width: 310px;
+    width: 340px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -345,8 +345,8 @@ filter: blur(20px);
 }
 .single-input label{
     position: absolute;
-    bottom: 5px;
-    left: 5px;
+    bottom: 10px;
+    left: 1px;
     color: #ccc;
     cursor: text;
     transition: 0.2s ease-in-out;
@@ -519,6 +519,14 @@ filter: blur(20px);
     }
     #popup2{
         width: 270px;
+    }
+
+    .nome_user{
+        display: none;
+    }
+
+    .user{
+        width: 100px;
     }
 
 
