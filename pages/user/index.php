@@ -37,9 +37,11 @@
                     <img src="../../assets/img/logo.png" alt="">
                 </a>
             </div>
-    
+
             <div class="user">
-                <p>Bem vindo de volta, <strong><?php echo ( $nome)?>!</strong></p>
+                <p class="nome_user">Bem vindo de volta, <strong>
+                        <?php echo ( $nome)?>!
+                    </strong></p>
                 <i class="ri-account-circle-fill Iuser"></i>
                 <a href="logout.php" class="logout"><i class="ri-logout-circle-line Ilogout"></i></a>
             </div>
@@ -47,11 +49,8 @@
     </header>
 
 
-    <main id="blur"<?php if(isset($_GET['href'])) {
-        if($_GET['href'] == $_SESSION['token']){ echo ("class=\"active\"");};
-        $_SESSION['token'] = mt_rand(1111,9999);
-    } 
-    ?>>
+    <main id="blur" <?php if(isset($_GET['href'])) { if($_GET['href']==$_SESSION['token']){ echo ("class=\"active\"");};
+        $_SESSION['token']=mt_rand(1111,9999); } ?>>
         <!-- ========================= MEUS CARTÕES ============== -->
         <section class="container-1">
             <div class="div-meus-cartoes">
@@ -60,7 +59,9 @@
                 </div>
                 <div class="cartao">
                     <img src="../../assets/img/Card1.png" alt="">
-                    <p> R$ <?php echo($dinheiro)?></p>
+                    <p> R$
+                        <?php echo($dinheiro)?>
+                    </p>
                 </div>
                 <div class="cartao">
                     <img src="../../assets/img/card2.png" alt="">
@@ -160,11 +161,11 @@
                     <div>
                         <p class="recebido"> R$ 1.800,00</p>
                     </div>
-                </div>    
+                </div>
         </section>
 
 
-    </main >
+    </main>
 
     <div id="popup">
         <div class="container-popup">
@@ -187,10 +188,10 @@
                     <input type="text" name="valor" class="input" required>
                     <label for="nome">Valor</label>
                 </div>
-                <input name="submit" id="submit" type="submit" class="btn-enviar"/>
+                <input name="submit" id="submit" type="submit" class="btn-enviar" />
             </form>
 
-            
+
             <button class="btn-fechar" onclick="toggle()">Fechar</button>
 
             <!-- ================= FOMULÁRIO ==================== -->
@@ -216,12 +217,12 @@
         };
     ?>
 
-    
 
 
 
 
-<script src="app.js"></script>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
