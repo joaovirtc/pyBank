@@ -25,6 +25,7 @@
     <script src="https://kit.fontawesome.com/a74e3185bb.js" crossorigin="anonymous"></script>
     <script src="iziToast.min.js" type="text/javascript"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
@@ -45,8 +46,6 @@
             </div>
         </nav>
     </header>
-
-
     <main id="blur"<?php if(isset($_GET['href'])) {
         if($_GET['href'] == $_SESSION['token']){ echo ("class=\"active\"");};
         $_SESSION['token'] = mt_rand(1111,9999);
@@ -118,7 +117,7 @@
                 <?php 
                     $historico =  $conexao->query("SELECT * FROM pix WHERE remetente = '$id' or destinatario = '$id' ORDER BY id_pix DESC");
                     foreach ($historico as $row) {
-                        $valor = $row["valor"];
+                        $valor = number_format($row["valor"], 2, ',', '.');
                         if($row["remetente"] === $id){
                             echo("
                                 <div class=\"transacao-1\">
@@ -184,7 +183,7 @@
                 <!-- ================= INPUT VALOR =============== -->
 
                 <div class="single-input">
-                    <input type="text" name="valor" class="input" required>
+                    <input placeholder="R$" type="number" step="0.01" name="valor"  min="0.01" class="input" id="valor" required>
                     <label for="nome">Valor</label>
                 </div>
                 <input name="submit" id="submit" type="submit" class="btn-enviar"/>
@@ -199,6 +198,7 @@
 
 
     <?php 
+    if(isset($_SESSION['enviado'])){
         if($_SESSION['enviado'] === true){
             echo (" 
                 
@@ -214,6 +214,8 @@
             $_SESSION['enviado'] = false;
             
         };
+    }
+        
     ?>
 
     

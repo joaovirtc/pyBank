@@ -82,7 +82,7 @@
 
                 </form>
                 <div class="links">
-                    <a href="">Já sou cliente</a>
+                    <a href="../login/">Já sou cliente</a>
                     <a href="../../index.html">Voltar</a>
                 </div>
             </div>

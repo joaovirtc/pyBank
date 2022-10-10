@@ -1,5 +1,6 @@
 <!-- <?php
     session_start();
+    $email = $_SESSION['email'];
 ?> -->
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -17,21 +18,20 @@
         <header>
             <a href="../../index.html"><img src="../../assets/img/logoWhite.png" alt="LOGO"></a>
         </header>
-
-
+    
         <div class="container__form">
             <form action="cod_verificar.php" method="POST">
                 <div class="text-form">
                     <h2>CÓDIGO DE VERIFICAÇÃO</h2>
-                    <p>Acabamos de enviar um código no seu e-mail
-                        cheque e o digite abaixo</p>
+                    <p>Acabamos de enviar um código para o e-mail <strong> <?php echo($email);?></strong>
+                        ,cheque e o digite abaixo</p>
                 </div>
                 <div class="single-input">
                     <input type="text" name="codigo_user" class="input" required>
                     <label for="codigo_user">Digite o código</label>
                 </div>
                 <div class="links">
-                    <a href="../../index.html" class="terciario">Enviar código novamente</a>
+                    <a href="./checkout.php" class="terciario">Enviar código novamente</a>
                     <input type="submit" class="primario" value="Conferir código" name="enviar">
                     <a href="../../index.html" class="secundario">Voltar</a>
                 </div>

@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="">Ainda não sou cliente</a>
+                    <a href="../registrar/">Ainda não sou cliente</a>
                     <a href="../../index.html">Voltar</a>
                 </div>
             </form>
