@@ -2,6 +2,12 @@
 
 pyBank é um banco 100% digital, buscando a melhor expêriencia para o usuário.
 
+## Desenvolvedores
+
+- [@kawan-lopes](https://www.github.com/kawan-lopes)
+
+- [@joaovirtc](https://www.github.com/joaovirtc)
+
 ## Funcionalidades
 
 - Login
@@ -34,10 +40,5 @@ pyBank é um banco 100% digital, buscando a melhor expêriencia para o usuário.
 
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-## Desenvolvedores
-
-- [@kawan-lopes](https://www.github.com/kawan-lopes)
-
-- [@joaovirtc](https://www.github.com/joaovirtc)
 
 ![Logo](./assets/img/preview.PNG)
