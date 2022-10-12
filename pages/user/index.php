@@ -121,11 +121,14 @@
                     foreach ($historico as $row) {
                         $valor = $row["valor"];
                         if($row["remetente"] === $id){
+                            $id_para = $row["destinatario"];
+                            $para = mysqli_fetch_array( $conexao->query("SELECT * FROM user where id_user = '$id_para'"));
+                            $para = $para[1];
                             echo("
                                 <div class=\"transacao-1\">
                                     <div><i class=\"fa-brands fa-pix\"></i></div>
                                     <div>
-                                        <p>Pix enviado</p>
+                                        <p>Pix enviado para {$para}</p>
                                     </div>
                                     <div>
                                         <p class=\"enviado\"> R$ {$valor}</p>
@@ -135,11 +138,14 @@
                             ");
                         };
                         if($row["destinatario"] === $id){
+                            $id_rmt = $row["remetente"];
+                            $nome_rmt =  mysqli_fetch_array($conexao->query("SELECT * FROM user where id_user = '$id_rmt' "));
+                            $nome_rmt = $nome_rmt["nome"];
                             echo("
                                 <div class=\"transacao-1\">
                                     <div><i class=\"fa-brands fa-pix\"></i></div>
                                     <div>
-                                        <p>Pix recebido</p>
+                                        <p>Pix recebido de $nome_rmt</p>
                                     </div>
                                     <div>
                                         <p class=\"recebido\"> R$ {$valor}</p>

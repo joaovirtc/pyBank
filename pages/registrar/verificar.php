@@ -11,7 +11,7 @@ if($usuario == $cod){
     $email = $_SESSION['email'];
     $senha = $_SESSION['senha'];       
     $conta = mt_rand(1111111111111111,9999999999999999);
-    $sql = $conexao->query("INSERT INTO user VALUES ('id_user', '$nome','$email', '$senha', 800.00, '$conta')");
+    $sql = $conexao->query("INSERT INTO user VALUES ('id_user', '$nome','$email', '$senha', 1800.00, '$conta')");
     unset($_SESSION['nome']);
     unset($_SESSION['email']);
     unset($_SESSION['senha']);
@@ -20,7 +20,7 @@ if($usuario == $cod){
 }
 // caso tenha algum erro volta para confirmar codigo 
 else{
-    $_SESSION['err_cod'] = '<p class="erro">codigo de verificaçao incorreto,tente novamente</p>';
+    $_SESSION['err_cod'] = '<p class="erro">Codigo de verificaçao incorreto,foi enviado um novo codigo</p>';
     header('location: ./checkout.php');
 }
 
