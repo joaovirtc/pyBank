@@ -1,6 +1,7 @@
 # pyBank
 
-pyBank é um projeto criado com o objetivo de nos desafiar. 
+pyBank é um projeto que surgiu de uma ideia nossa, queriamos fazer algo para nos desafiar e então decidimos fazer esse projeto. 
+Espero que gostem !
 
 ## Desenvolvedores
 
