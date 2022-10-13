@@ -2,7 +2,7 @@
 
 pyBank é um projeto criado com o objetivo de nos desafiar. 
 
-## Autores
+## Desenvolvedores
 
 - [@kawan-lopes](https://www.github.com/kawan-lopes)
 
