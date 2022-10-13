@@ -62,7 +62,7 @@
 
                 <div class="links">
                     <a href="#">Esqueci minha senha</a>
-                    <a href="#">Ainda não sou cliente</a>
+                    <a href="../registrar/index.php">Ainda não sou cliente</a>
                 </div>
             </form>
         </div>

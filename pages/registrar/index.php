@@ -52,7 +52,7 @@
                     <div class="single-input">
                         <input type="password" name="senha" class="input validar" onchange="validarPassword()"
                             id="password" required>
-                        <label for="nome">Senha</label>
+                        <label for="senha">Senha</label>
                     </div>
 
 
