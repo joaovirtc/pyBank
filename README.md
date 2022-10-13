@@ -1,6 +1,6 @@
 # pyBank
 
-pyBank é um banco 100% digital, buscando a melhor expêriencia para o usuário.
+pyBank é um projeto criado com o objetivo de nos desafiar. 
 
 ## Funcionalidades
 
