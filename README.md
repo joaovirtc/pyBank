@@ -2,11 +2,19 @@
 
 pyBank é um projeto criado com o objetivo de nos desafiar. 
 
+## Autores
+
+- [@kawan-lopes](https://www.github.com/kawan-lopes)
+
+- [@joaovirtc](https://www.github.com/joaovirtc)
+
 ## Funcionalidades
 
 - Login
+- Criar Conta
+- Checkout 
 - Responsividade
-- Pix
+- Envio de Pix
 - Multiplataforma
 
 ## Stack utilizada
@@ -33,11 +41,6 @@ pyBank é um projeto criado com o objetivo de nos desafiar.
 
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-## Autores
-
-- [@kawan-lopes](https://www.github.com/kawan-lopes)
-
-- [@joaovirtc](https://www.github.com/joaovirtc)
 
 ## Prévia
 
