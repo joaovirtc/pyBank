@@ -3,6 +3,10 @@
 pyBank é um projeto que surgiu de uma ideia nossa, queriamos fazer algo para nos desafiar e então decidimos fazer esse projeto. 
 Espero que gostem ! 
 
+## Prévia
+
+![Logo](./assets/img/previewUser.png)
+
 
 ## Desenvolvedores
 
@@ -44,6 +48,4 @@ Espero que gostem !
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 
-## Prévia
 
-![Logo](./assets/img/previewUser.png)
